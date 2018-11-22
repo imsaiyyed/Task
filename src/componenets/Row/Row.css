@@ -1,0 +1,23 @@
+.Row{
+    border: 2px solid #33ff00;
+    display: flex;
+    margin: 10px;
+}
+.Email{
+    border: 2px solid #069452;
+    width: 35%;
+    margin: 5px;
+
+}
+.Prediction{
+    width: 15%;
+    border: 2px solid #069452;
+    margin: 5px;
+
+}
+.Choice{
+    width: 35%;
+    border: 2px solid #069452;
+    margin: 5px;
+
+}
