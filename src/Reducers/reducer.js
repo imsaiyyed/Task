@@ -23,8 +23,9 @@ const initialState={
     ]
 }
 
+
 const reducer=(state=initialState,action)=>{
-    console.log('here',action);
+    //console.log('here',action);
     if(action.type==="UPDATE")
     {
         /*let copy={...state.data};
@@ -39,19 +40,32 @@ const reducer=(state=initialState,action)=>{
 
             }
         }*/
-        console.log(state);
+        //console.log(state);
         const newObj={...state}
         let copy=[...newObj.data];
         for(let item in copy)
         {
-            if(action.id===copy[item].id)
+            if(action.id===copy[item].Id)
             {
-                copy[item].prediction=action.choice;
+                copy[item].Categorization=action.choice;
             }
         }
         newObj.data=copy;
         return ({...newObj
         });
+    }
+    else if(action.type==="INITIALIZE"){
+        console.log(state);
+        console.log(action.allEmails);
+        const newObj={...state}
+        let copy=[...newObj.data];
+        copy=[...action.allEmails];
+        newObj.data=copy;
+        for(let item in copy)
+        {
+            console.log(copy[item].Id);
+        }
+        return({...newObj});
     }
     return state;
 }
