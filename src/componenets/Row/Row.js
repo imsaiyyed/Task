@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './Row.css'
 // let Row=(props)=>{
 //     return (
@@ -23,19 +24,20 @@ let Row=(props)=>{
     return (
         <div className='Row'>
             <div className='Email'>
-                <h3>Email:</h3>
                 <p>{props.email}</p>
             </div>
-            <div className='Prediction'>
-                <h3>Categorization:</h3>
+            {/* <div className='Prediction'>
                 <p>{props.prediction}</p>
-            </div>
+            </div> */}
             <div className='Choice'>
-                <label>Appreciation</label><input onChange={props.changed} type='radio' value='Appreciation' name='choice'/>
-                <label>Complaint</label><input onChange={props.changed}  type='radio' value='Complaint' name='choice'/>
-                <label>Information</label><input onChange={props.changed} type='radio' value='Information' name='choice'/>
-                <label>Query</label><input onChange={props.changed}  type='radio' value='Query' name='choice'/>
+                <div className='ChoiceList'>
+                    <input onChange={props.changed} type='radio' value='Appreciation'  name={'choice'+props.id}/><label   value='Appreciation'>Appreciation</label><br/>
+                    <input onChange={props.changed}  type='radio' value='Complaint' name={'choice'+props.id}/><label  value='Complaint'>Complaint</label><br/>
+                    <input onChange={props.changed} type='radio' value='Information' name={'choice'+props.id}/><label   value='Information'>Information</label><br/>
+                    <input onChange={props.changed}  type='radio' value='Query' name={'choice'+props.id}/><label  value='Query'>Query</label><br/>
+                </div>
             </div>
+
         </div>
     );
 }

@@ -1,23 +1,45 @@
 .Row{
-    border: 2px solid #33ff00;
     display: flex;
     margin: 10px;
+    color: #000000;
 }
 .Email{
-    border: 2px solid #069452;
-    width: 35%;
-    margin: 5px;
+    border: 2px solid #ffffff;
+    width: 60%;
+    margin: 2px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px #505050;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
 
 }
 .Prediction{
     width: 15%;
-    border: 2px solid #069452;
-    margin: 5px;
+    border: 2px solid #ffffff;
+    margin: 2px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px #505050;
 
 }
 .Choice{
-    width: 35%;
-    border: 2px solid #069452;
-    margin: 5px;
-
+    width: 40%;
+    border: 2px solid #ffffff;
+    margin: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    background-color: aliceblue;
+    box-shadow: 5px 5px #505050;
+    text-align: left;
+}
+.ChoiceList{
+    width: 100%;
+    text-align:start;
+    margin-left: 40%;
+  
+}
+.RadioB1{
+    margin-left: 10px;
+}
+.RadioB2{
+    margin-left: 10px;
 }
